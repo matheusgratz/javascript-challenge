@@ -23,17 +23,22 @@ dropDown.on("change", function(){
     var dropDownValue = parseInt(dropDown.property('value'));
 
     if (dropDownValue === 1) {
+        inputElement.property("value", "");
         inputElement.attr("placeholder", "1/11/2010");
     } else {
         if (dropDownValue === 2) {
+            inputElement.property("value", "");
             inputElement.attr("placeholder", "fresno");
         } else {
             if (dropDownValue === 3) {
+                inputElement.property("value", "");
                 inputElement.attr("placeholder", "ca");
             } else {
                 if (dropDownValue === 4) {
+                    inputElement.property("value", "");
                     inputElement.attr("placeholder", "us");
                 } else {
+                    inputElement.property("value", "");
                     inputElement.attr("placeholder", "light");
                 }
             }
@@ -76,7 +81,7 @@ function runFilter() {
     // Pop-up if search is empty!
     if (filteredData.length === 0 ) {
         alert("Sorry, your search returned empty. Check your search input and try again!")
-    }
+    };
 
     // remove any children from the table
     ufoTableBody.html("");

@@ -29,6 +29,11 @@ function runFilter() {
     var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
     //console.log(filteredData);
 
+    // Pop-up if search is empty!
+    if (filteredData.length === 0 ) {
+        alert("Sorry, your search returned empty. Check your search input and try again!")
+    };
+
     // remove any children from the list to
     ufoTableBody.html("");
 

@@ -15,7 +15,7 @@ var dropDown = d3.select("#dropDownMenu")
 var inputElement = d3.select("#inputDataFilter");
 
 // Create event handlers 
-filterButton.on("click", runFilter);
+filterButton.on("click", runFilter);4
 ufoTableBody.on("change", runFilter);
 
 dropDown.on("change", function(){
@@ -46,6 +46,24 @@ dropDown.on("change", function(){
     }
     
 });
+
+function loadTableFull() {
+
+    for (let i = 0; i < tableData.length; i++) {
+         
+         ufoTableBody.append("tr");
+         ufoTableBody.append("td").text(tableData[i].datetime);
+         ufoTableBody.append("td").text(tableData[i].city);
+         ufoTableBody.append("td").text(tableData[i].state);
+         ufoTableBody.append("td").text(tableData[i].country);
+         ufoTableBody.append("td").text(tableData[i].shape);
+         ufoTableBody.append("td").text(tableData[i].durationMinutes);
+         ufoTableBody.append("td").text(tableData[i].comments);
+                 
+     };
+}
+
+loadTableFull();
 
 // Complete the event handler function for the form
 function runFilter() {

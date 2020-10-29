@@ -10,7 +10,26 @@ var ufoTableBody = ufoTable.select("tbody")
 
 // Create event handlers 
 filterButton.on("click", runFilter);
-ufoTableBody.on("submit",runFilter);
+ufoTableBody.on("submit", runFilter);
+
+function loadTableFull() {
+
+    for (let i = 0; i < tableData.length; i++) {
+         
+         ufoTableBody.append("tr");
+         ufoTableBody.append("td").text(tableData[i].datetime);
+         ufoTableBody.append("td").text(tableData[i].city);
+         ufoTableBody.append("td").text(tableData[i].state);
+         ufoTableBody.append("td").text(tableData[i].country);
+         ufoTableBody.append("td").text(tableData[i].shape);
+         ufoTableBody.append("td").text(tableData[i].durationMinutes);
+         ufoTableBody.append("td").text(tableData[i].comments);
+                 
+     };
+}
+
+loadTableFull();
+
 
 // Complete the event handler function for the form
 function runFilter() {
@@ -50,13 +69,3 @@ function runFilter() {
                 
     }
 };
-
-// {
-//     datetime: "1/1/2010",
-//     city: "fresno",
-//     state: "ca",
-//     country: "us",
-//     shape: "light",
-//     durationMinutes: "1 min",
-//     comments: "Fresno cal. bright light hovers over head then vanished"
-//   },

@@ -63,6 +63,7 @@ function loadTableFull() {
      };
 }
 
+// Run Function
 loadTableFull();
 
 // Complete the event handler function for the form

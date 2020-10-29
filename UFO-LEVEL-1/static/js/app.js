@@ -28,6 +28,7 @@ function loadTableFull() {
      };
 }
 
+// Run function
 loadTableFull();
 
 

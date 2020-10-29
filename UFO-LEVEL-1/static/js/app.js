@@ -2,11 +2,11 @@
 var tableData = data;
 
 // Select the button Filter (#filter-btn)
-var filterButton = d3.select("#filter-btn")
+var filterButton = d3.select("#filter-btn");
 
 // Select the table (#ufo-table)
-var ufoTable = d3.select("#ufo-table")
-var ufoTableBody = ufoTable.select("tbody")
+var ufoTable = d3.select("#ufo-table");
+var ufoTableBody = ufoTable.select("tbody");
 
 // Create event handlers 
 filterButton.on("click", runFilter);
@@ -26,7 +26,7 @@ function loadTableFull() {
          ufoTableBody.append("td").text(tableData[i].comments);
                  
      };
-}
+};
 
 // Run function
 loadTableFull();
@@ -68,5 +68,5 @@ function runFilter() {
         ufoTableBody.append("td").text(filteredData[event].durationMinutes);
         ufoTableBody.append("td").text(filteredData[event].comments);
                 
-    }
+    };
 };

@@ -2,20 +2,20 @@
 var tableData = data;
 
 // Select the button Filter (#filter-btn)
-var filterButton = d3.select("#filter-btn")
+var filterButton = d3.select("#filter-btn");
 
 // Select the table (#ufo-table)
-var ufoTable = d3.select("#ufo-table")
-var ufoTableBody = ufoTable.select("tbody")
+var ufoTable = d3.select("#ufo-table");
+var ufoTableBody = ufoTable.select("tbody");
 
 // Select the dropdown value
-var dropDown = d3.select("#dropDownMenu")
+var dropDown = d3.select("#dropDownMenu");
 
 // Select the input element and get the raw HTML node
 var inputElement = d3.select("#inputDataFilter");
 
 // Create event handlers 
-filterButton.on("click", runFilter);4
+filterButton.on("click", runFilter);
 ufoTableBody.on("change", runFilter);
 
 dropDown.on("change", function(){
@@ -61,7 +61,7 @@ function loadTableFull() {
          ufoTableBody.append("td").text(tableData[i].comments);
                  
      };
-}
+};
 
 // Run Function
 loadTableFull();
@@ -95,7 +95,7 @@ function runFilter() {
                 }
             }
         }
-    }
+    };
 
     // Pop-up if search is empty!
     if (filteredData.length === 0 ) {
@@ -116,5 +116,5 @@ function runFilter() {
         ufoTableBody.append("td").text(filteredData[event].durationMinutes);
         ufoTableBody.append("td").text(filteredData[event].comments);
                 
-    }
+    };
 };
